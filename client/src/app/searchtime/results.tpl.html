@@ -1,0 +1,45 @@
+                <br/>
+                <div class="ow blog-page row-offcanvas row-offcanvas-left" ng-class="bla">
+                <p class="visible-xs"><button type="button" ng-click="toggle()" class="btn btn-primary btn-xs" data-toggle="offcanvas">Filter</button></p>    
+                    <!-- Left Sidebar -->
+                    <div class="col-md-3 col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                        <div class="margin-bottom-10">
+                            <div class="headline headline-md"><h2>Filter search results</h2></div>
+                            
+                              <div class="checkbox" ng-repeat="s in services">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    {{s.name}}
+                                </label>
+                              </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Left Sidebar -->
+                    <div class="col-md-9 md-margin-bottom-20">
+                        <div class="search-blocks" ng-class-odd="'search-blocks-top-yellow'" ng-class-even="'search-blocks-top-sea'"ng-repeat="shop in searchResults">
+                            <div class="row">
+                                <div class="col-md-3 search-img">
+                                    <img alt="" ng-src="assets/img/clients/{{shop._id}}.jpg" class="img-responsive">
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="#">{{shop.name}}</a></h2>
+                                    <p>{{shop.description}}</p>
+                                </div>
+                            </div> 
+                            <div class="row">
+                               <div class="col-md-8 search-img">
+                                <ul class="list-unstyled">
+                                   <li><i class="icon-map-marker"></i> {{shop.address}}</li>
+                                   <li><i class="icon-pushpin"></i> {{shop.distance}} km</li>
+                               </ul>                             
+                               </div> 
+                            <div class="col-md-3">
+                             <a href="#" class="btn-u btn-u-sea btn-xs pull-right">Book</a>
+                            </div>
+                           </div>                          
+                         </div>
+                         <div class="margin-bottom-20 clearfix"></div>
+                    </div>
+</div><!--/row-->  
+   

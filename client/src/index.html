@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unify</title>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="<%= grunt.config.get('pkg.name') %>.css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.js"></script>
+  <script type="text/javascript" src="jquery-ui.js"></script>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="angular-ui.js"></script>
+  <script type="text/javascript" src="<%= grunt.config.get('pkg.name') %>.js"></script>
+</head>
+
+<body ng-controller="AppCtrl">
+
+<div ng-include="'header.tpl.html'"></div>
+<div ng-view class="container"></div>
+
+
+<!--=== Breadcrumbs ===-->
+<!--
+<div class="breadcrumbs margin-bottom-20">
+    <div class="container">
+        <h1 class="pull-left">Book time with car mechanic</h1>
+        <ul class="pull-right breadcrumb">
+            <li class="active">Search mechanic</li>
+        </ul>
+    </div>
+</div>-->
+<!--=== End Breadcrumbs ===-->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady"></script>
+</body>
+</html>
